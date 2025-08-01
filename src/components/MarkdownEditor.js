@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
 
 const MarkdownEditor = () => {
   const [markdown, setMarkdown] = useState('');
@@ -10,17 +9,15 @@ const MarkdownEditor = () => {
   }, [markdown]);
 
   return (
-    <>
       <textarea
         className="textarea"
-        placeholder="Write your markdown here..."
+        placeholder="Hello world"
         value={markdown}
         onChange={(e) => setMarkdown(e.target.value)}
       />
       <div className="preview">
         <ReactMarkdown>{preview}</ReactMarkdown>
       </div>
-    </>
   );
 };
 
