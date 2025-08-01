@@ -10,7 +10,7 @@ const MarkdownEditor = () => {
   }, [markdown]);
 
   return (
-    <div className="app">
+    <>
       <textarea
         className="textarea"
         placeholder="Hello world"
@@ -20,7 +20,7 @@ const MarkdownEditor = () => {
       <div className="preview">
         <ReactMarkdown>{preview}</ReactMarkdown>
       </div>
-    </div>
+    </>
   );
 };
 
