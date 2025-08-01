@@ -4,7 +4,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <div className="app"> {/* ✅ Main container as required by Cypress */}
+    <div className="app"> 
       {/* Do not remove the main container */}
       <MarkdownEditor />
     </div>
