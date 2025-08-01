@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 const MarkdownEditor = () => {
-  const [markdown, setMarkdown] = useState('');
+  const [markdown, setMarkdown] = useState('# Hello **World**');
   const [preview, setPreview] = useState('');
 
   useEffect(() => {
@@ -10,7 +10,7 @@ const MarkdownEditor = () => {
   }, [markdown]);
 
   return (
-    <>
+    <div className="app">
       <textarea
         className="textarea"
         placeholder="Hello world"
@@ -20,7 +20,7 @@ const MarkdownEditor = () => {
       <div className="preview">
         <ReactMarkdown>{preview}</ReactMarkdown>
       </div>
-    </>
+    </div>
   );
 };
 
