@@ -1,13 +1,19 @@
-import React from "react";
-import MarkdownEditor from "./MarkdownEditor";
+import React, { useEffect, useState } from 'react'
+import "../styles/App.css"
+import MarkdownEditor from './MarkdownEditor'
 
 const App = () => {
+    const[text,setText]  = useState();
+    
+    useEffect(()=>{
+     
+    },[text]);
   return (
-    <div>
-      {/* Do not remove the main div */}
-      <MarkdownEditor />
-    </div>
-  );
-};
+    <div className='app'>
+   <MarkdownEditor text={text} setText={setText}></MarkdownEditor>
 
-export default App;
+    </div>
+  )
+}
+
+export default App
