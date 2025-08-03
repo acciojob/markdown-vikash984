@@ -1,16 +1,24 @@
-import React from 'react'
+import React from 'react';
+import ReactMarkdown from 'react-markdown'; // ✅ Import library
 
-const MarkdownEditor = (props) => {
-    const{text,setText}  = props;
+const MarkdownEditor = ({ text, setText }) => {
   return (
     <div>
       <h1>UI Mockup</h1>
-        <textarea  className='textarea' onChange={(e)=>setText(e.target.value)}></textarea>
 
-        <div className='preview'><h1>{text} </h1> </div>
-        
+      {/* ✅ Markdown Input Area */}
+      <textarea
+        className='textarea'
+        onChange={(e) => setText(e.target.value)}
+        value={text}
+      />
+
+      {/* ✅ Live Markdown Preview */}
+      <div className='preview'>
+        <ReactMarkdown>{text}</ReactMarkdown>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default MarkdownEditor
+export default MarkdownEditor;
