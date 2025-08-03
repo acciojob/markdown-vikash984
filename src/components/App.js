@@ -1,28 +1,13 @@
-import React, { useState, useEffect } from "react";
-import ReactMarkdown from "react-markdown";
-import "./styles.css";
+import React from "react";
+import MarkdownEditor from "./MarkdownEditor";
 
-const MarkdownEditor = () => {
-  const [markdown, setMarkdown] = useState("");
-  const [preview, setPreview] = useState("");
-
-  useEffect(() => {
-    setPreview(markdown);
-  }, [markdown]);
-
+const App = () => {
   return (
-    <div className="app">
-      <textarea
-        className="textarea"
-        value={markdown}
-        onChange={(e) => setMarkdown(e.target.value)}
-        placeholder="Hello world"
-      />
-      <div className="preview">
-        <ReactMarkdown>{preview}</ReactMarkdown>
-      </div>
+    <div>
+      {/* Do not remove the main div */}
+      <MarkdownEditor />
     </div>
   );
 };
 
-export default MarkdownEditor;
+export default App;
